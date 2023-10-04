@@ -1,0 +1,9 @@
+﻿CREATE TABLE [dbo].[U_USER]
+(
+	[u_id] INT NOT NULL PRIMARY KEY IDENTITY, 
+    [u_email] VARCHAR(100) NOT NULL UNIQUE,
+	[u_name] VARCHAR(100) NOT NULL UNIQUE,
+	[u_pwd_hash] VARBINARY(64) NOT NULL,
+	[u_salt] VARCHAR(100) NOT NULL,
+	[u_role_id] INT DEFAULT 1 NOT NULL
+)
